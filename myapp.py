@@ -74,17 +74,17 @@ if(file!=None):
             
     
       st.subheader(':rainbow[Groupby : Simplify your data analysis]', divider='rainbow')
-st.write('The groupby lets you summarize data by specific categories and groups')
-with st.expander('Group By your columns'):
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        groupby_cols = st.multiselect('Choose your column to groupby', options=list(data.columns))
-    with col2:
-        operation_col = st.selectbox('Choose column for operation', options=list(data.columns))
-    with col3:
-        operation = st.selectbox('Choose operation', options=['sum', 'max', 'min', 'mean', 'median', 'count'])
+      st.write('The groupby lets you summarize data by specific categories and groups')
+      with st.expander('Group By your columns'):
+         col1, col2, col3 = st.columns(3)
+      with col1:
+          groupby_cols = st.multiselect('Choose your column to groupby', options=list(data.columns))
+      with col2:
+          operation_col = st.selectbox('Choose column for operation', options=list(data.columns))
+      with col3:
+          operation = st.selectbox('Choose operation', options=['sum', 'max', 'min', 'mean', 'median', 'count'])
     
-    if groupby_cols:
+      if groupby_cols:
         result = data.groupby(groupby_cols).agg(
             newcol=(operation_col, operation)
         ).reset_index()
