@@ -3,3 +3,5 @@ plotly
 streamlit
 openpyxl
 plotly.express
+streamlit==1.33
+streamlit-lottie==0.0.5
