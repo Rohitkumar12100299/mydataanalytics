@@ -1,7 +1,6 @@
 pandas
-plotly
 streamlit
 openpyxl
-plotly.express
+plotly==5.23.0
 streamlit==1.33
 streamlit-lottie==0.0.5
